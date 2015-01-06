@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>iConnectPlus | Options</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jack Barker (DST Bluedoor)">
+
+    <!-- styles -->
+    <link href="bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="options.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">iConnectPlus</a>
+                 </div>
+
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Options</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </nav>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+
+        <div class="col-md-8 column">
+            <h1 class="page-header">Options</h1>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="prism-disabled">Disable "pretty code snippets"?</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="custom-css-enabled">Load some custom css?</label>
+                    </div>
+                    <label class="custom-css-conditional" style="display: none;">Custom css</label>
+                    <textarea class="form-control custom-css-conditional" id="custom-css-content" rows="10" style="display: none;"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" id="save">Save</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div id="status" class="alert alert-success"></div>
+                </div>
+            </div>
+        </div><!-- col-md-8 column -->
+
+        <div class="col-md-4 column">
+            <h2 class="sub-header">Feedback?</h2>
+            <a href="mailto:j.barker@dstbluedoor.com?subject=iConnect%20Plus%20Feedback">Send Feedback</a>
+        </div>
+
+    </div><!-- row clearfix -->
+</div><!-- container -->
+
+<!-- Scripts -->
+<script src="jquery.min.js"></script>
+<script src="bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="options.js"></script>
+
+</body>
+</html>

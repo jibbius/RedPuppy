@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "iConnectPlus (Bluedoor)",
+  "author": "Jack Barker",
+  "version": "0.1.0",
+  
+  "description": "Ext' for Bluedoor iConnect. Adds: Notifications icon, Prism-js (improved code snippet visibility)",
+  "icons":
+  	{
+      "32": "iconnectico.png",
+  		"128": "iconnectico_128.png"
+    },
+  
+  "browser_action": {
+    "default_icon": "iconnectico.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "http://iconnect.bluedoor.local/*",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' https://iconnect.bluedoor.local; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://iconnect.bluedoor.local/*"],
+      "css": ["prism/prism.min.css"],
+      "js": ["jquery.min.js","prism/prism.min.js","init.js"]
+    }
+  ],
+   "options_page": "options.html"
+}
