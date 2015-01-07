@@ -32,3 +32,8 @@
 .notifications-panel-controls{
 	display: none;
 }
+/* New notification */
+.new {
+	color: #d98d2a;
+	background-color: #f7f7f7;
+}
