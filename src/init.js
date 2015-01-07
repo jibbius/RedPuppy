@@ -5,11 +5,24 @@ if (typeof iCPLoaded === 'undefined') {
 
     chrome.storage.sync.get(
     	{
+            preferredSort: false,
     		prismDisabled: false,
     		customCssEnabled: false,
     		customCssContent: ''
     	},
     	function(items) {
+    		if(items.preferredSort){
+    			if(
+    				// A directory page, that matches our current URL
+    				window.location.pathname === $("#list-directory").data( "options" ).Url
+    				// There is no sort currently in place
+    				&& !window.location.search
+    			){
+    				// Redirect to the desired sort parameter
+    				self.location=(window.location.pathname).concat("?sort=Recent");
+    			}
+    		}
+
     		if(!items.prismDisabled){
 
 			    /*
@@ -46,6 +59,8 @@ if (typeof iCPLoaded === 'undefined') {
 				head.appendChild(style);
 
     		}
+
+
 
   		}
   	);
