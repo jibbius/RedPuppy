@@ -1,10 +1,12 @@
 // Saves options to chrome.storage
 function save_options() {
   var prismDisabled = document.getElementById('prism-disabled').checked;
+  var preferredSort = document.getElementById('preferred-sort').value;
   var customCssEnabled = document.getElementById('custom-css-enabled').checked;
   var customCssContent = document.getElementById('custom-css-content').value;
   chrome.storage.sync.set({
     prismDisabled: prismDisabled,
+    preferredSort: preferredSort,
     customCssEnabled: customCssEnabled,
     customCssContent: customCssContent
   }, function() {
@@ -22,6 +24,7 @@ function restore_options() {
   // Use default value prismDisabled = false.
   chrome.storage.sync.get({
     prismDisabled: false,
+    preferredSort: false,
     customCssEnabled: false,
     customCssContent: [
     '/* use smaller employee spotlight image */',
@@ -37,6 +40,7 @@ function restore_options() {
 
   }, function(items) {
     document.getElementById('prism-disabled').checked = items.prismDisabled;
+    document.getElementById('preferred-sort').value = items.preferredSort;
     document.getElementById('custom-css-enabled').checked = items.customCssEnabled;
     document.getElementById('custom-css-content').value = items.customCssContent;
 
@@ -52,4 +56,14 @@ document.getElementById('save').addEventListener('click',save_options);
 // Determine (on click), whether to hide/show
 jQuery('#custom-css-enabled').click(function() {
   jQuery('.custom-css-conditional')[this.checked ? "show" : "hide"]();
+});
+
+
+// Tooltips and pop-overs
+$('[data-toggle="tooltip"]').tooltip({
+    'placement': 'top'
+});
+$('[data-toggle="popover"]').popover({
+    trigger: 'hover',
+        'placement': 'top'
 });
