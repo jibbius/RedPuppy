@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "iConnectPlus (Bluedoor)",
   "author": "Jack Barker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   
   "description": "Ext' for Bluedoor iConnect. Adds: Notifications icon, Prism-js (improved code snippet visibility)",
   "icons":
