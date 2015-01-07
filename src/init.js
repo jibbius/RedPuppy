@@ -11,7 +11,7 @@ if (typeof iCPLoaded === 'undefined') {
     		customCssContent: ''
     	},
     	function(items) {
-    		if(items.preferredSort){
+    		if(items.preferredSort && items.preferredSort != "false"){
     			if(
     				// A directory page, that matches our current URL
     				window.location.pathname === $("#list-directory").data( "options" ).Url
@@ -19,7 +19,7 @@ if (typeof iCPLoaded === 'undefined') {
     				&& !window.location.search
     			){
     				// Redirect to the desired sort parameter
-    				self.location=(window.location.pathname).concat("?sort=Recent");
+    				self.location=(window.location.pathname).concat("?sort=").concat(preferredSort);
     			}
     		}
 
