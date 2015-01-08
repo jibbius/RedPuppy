@@ -4,10 +4,10 @@ if (typeof iCPLoaded === 'undefined') {
 
     chrome.storage.sync.get(
         {
-            preferredSort: false,
-            prismDisabled: false,
-            customCssEnabled: false,
-            customCssContent: ''
+          preferredSort: false,
+          prismDisabled: false,
+          customCssEnabled: false,
+          customCssContent: ''
         },
         function(items) {
             if(
