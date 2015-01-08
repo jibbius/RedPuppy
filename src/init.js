@@ -11,15 +11,22 @@ if (typeof iCPLoaded === 'undefined') {
     		customCssContent: ''
     	},
     	function(items) {
-    		if(items.preferredSort && items.preferredSort != "false"){
+            var list = $("#list-directory");
+    		if( items.preferredSort
+                && items.preferredSort != "false"
+                // This nested (exists?) check, is to ensure we don't log console errors related to undefined.
+                && list
+                && list.data( "options" )
+                && list.data( "options" ).Url // TODO: May be a better way to do this?
+            ){
     			if(
     				// A directory page, that matches our current URL
-    				window.location.pathname === $("#list-directory").data( "options" ).Url
+    				window.location.pathname === list.data( "options" ).Url
     				// There is no sort currently in place
     				&& !window.location.search
     			){
     				// Redirect to the desired sort parameter
-    				self.location=(window.location.pathname).concat("?sort=").concat(preferredSort);
+    				self.location=(window.location.pathname).concat("?sort=").concat(items.preferredSort);
     			}
     		}
 
