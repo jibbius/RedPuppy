@@ -10,3 +10,6 @@ body {
   padding:0;
   border:0;
 }
+a.navbar-brand img, a.navbar-brand span{
+  float: left;
+}
