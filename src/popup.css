@@ -1,39 +1,39 @@
 #notifications{
-	width: 600px;
+    width: 600px;
 }
 .notification-items {
-	max-height: 500px;
-	position: relative;
-	overflow-y: auto;
-	margin-bottom: 10px;
+    max-height: 500px;
+    position: relative;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 .notification-item {
-	position: relative;
-	margin-bottom: 10px;
-	padding: 7px 10px 10px 10px;
-	margin: 10px;
-	font-size: 12px;
-	border-bottom: 2px solid #B4DBFC;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 7px 10px 10px 10px;
+    margin: 10px;
+    font-size: 12px;
+    border-bottom: 2px solid #B4DBFC;
 }
 .notification-item .parent-page-title {
-	color: #888;
-	float: left;
-	font-size: 10px;
+    color: #888;
+    float: left;
+    font-size: 10px;
 }
 .notification-item .datetime {
-	color: #888;
-	float: right;
+    color: #888;
+    float: right;
 }
 .notification-item .item-title {
-	padding: 7px 0;
-	clear: both;
+    padding: 7px 0;
+    clear: both;
 }
 /* Hide the controls (for now?) */
 .notifications-panel-controls{
-	display: none;
+    display: none;
 }
 /* New notification */
 .new {
-	color: #d98d2a;
-	background-color: #f7f7f7;
+    color: #d98d2a;
+    background-color: #f7f7f7;
 }

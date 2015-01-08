@@ -2,7 +2,6 @@
 if (typeof iCPLoaded === 'undefined') {
     var iCPLoaded = true;
 
-
     chrome.storage.sync.get(
         {
             preferredSort: false,
@@ -11,7 +10,6 @@ if (typeof iCPLoaded === 'undefined') {
             customCssContent: ''
         },
         function(items) {
-
             if(
                 // Check if a sort preference specified
                 items.preferredSort
@@ -35,7 +33,6 @@ if (typeof iCPLoaded === 'undefined') {
             }
 
             if(!items.prismDisabled){
-
                 /*
                 I tend to use inline styles as a fallback (i.e. for users without the iConnect+ chrome extension)
                 e.g. <pre class="code" style="[hack]">
@@ -51,11 +48,9 @@ if (typeof iCPLoaded === 'undefined') {
                 For this reason, we need to call the function explicity:
                 */
                 Prism.highlightAll();
-
             }
 
             if(items.customCssEnabled){
-
                 var css = items.customCssContent,
                     head = document.head || document.getElementsByTagName('head')[0],
                     style = document.createElement('style');
@@ -68,10 +63,7 @@ if (typeof iCPLoaded === 'undefined') {
                 }
 
                 head.appendChild(style);
-
             }
-
-
 
         }
     );
