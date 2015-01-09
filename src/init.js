@@ -15,7 +15,7 @@ if (typeof iCPLoaded === 'undefined') {
                 items.preferredSort
                 && items.preferredSort != "false"
                 // and there is no sort already in place
-                && location.search
+                && !location.search
             ){
                 // Use jQuery to determine if required page elements are present
                 var listDataOptions = $("#list-directory[data-options]");
@@ -28,7 +28,7 @@ if (typeof iCPLoaded === 'undefined') {
                     && location.pathname === listDataOptions.data( "options" ).Url
                 ){
                     // Redirect to the desired sort parameter
-                    self.location=(window.location.pathname).concat("?sort=").concat(items.preferredSort);
+                    self.location=(location.pathname).concat("?sort=").concat(items.preferredSort);
                 }
             }
 
