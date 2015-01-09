@@ -3,6 +3,7 @@
 ## 0.1.4
  - Changelog created
  - Shortname set to: iCPlus
+ - Visual improvements to Options page
 
 ## 0.1.3
  - New iconography
