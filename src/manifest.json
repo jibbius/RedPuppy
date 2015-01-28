@@ -3,7 +3,7 @@
   "name": "iConnectPlus (Bluedoor)",
   "short_name": "iCPlus",
   "author": "Jack Barker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   
   "description": "Extension for Bluedoor's iConnect intranet",
   "icons":
@@ -24,10 +24,22 @@
   "content_security_policy": "script-src 'self' https://iconnect.bluedoor.local; object-src 'self'",
   "content_scripts": [
     {
+      "run_at": "document_start",
       "matches": ["http://iconnect.bluedoor.local/*"],
-      "css": ["lib/prism/prism.min.css"],
-      "js": ["lib/jquery.min.js","lib/prism/prism.min.js","init.js"]
+      "js": ["pre-init.js"]
+    },
+    {
+      "matches": ["http://iconnect.bluedoor.local/*"],
+      "js": ["init.js"]
+    },
+    {
+      "matches": ["http://iconnect.bluedoor.local/*"],
+      "js": ["lib/jquery.min.js","lib/prism/prism.min.js"],
+      "css": ["lib/prism/prism.min.css"]
     }
   ],
-   "options_page": "options.html"
+   "options_page": "options.html",
+   "web_accessible_resources": [
+    "themes/*"
+  ]
 }
