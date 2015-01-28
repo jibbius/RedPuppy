@@ -46,7 +46,8 @@
       <div class="col-md-8 column">
         <h1 class="page-header">Options</h1>
         <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-9">
+          <label class="control-label col-sm-3">Pretty Code</label>
+          <div class="col-sm-7">
             <div class="checkbox">
               <label><input type="checkbox" id="prism-disabled">Disable "pretty code snippets"?</label>
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
@@ -70,13 +71,26 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-9">
+          <label for="icp-theme" class="control-label col-sm-3">Theme</label>
+          <div class="col-sm-7">
+            <select id="icp-theme" class="form-control">
+              <option value="false">None</option>
+              <option value="timberTheme">Timber (v0.1)</option>
+            </select>
+          </div>
+          <div class="col-sm-2">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
+            data-content="Instant visual love for your iConnect"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3">Custom css</label>
+          <div class="col-sm-7">
             <div class="checkbox">
               <label><input type="checkbox" id="custom-css-enabled">Load some custom css?</label>
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
               data-content="Allows you specify your own (additional) CSS to be loaded when viewing iConnect."></span>
-            </div>
-            <label class="custom-css-conditional" style="display: none;">Custom css</label>
+            </div>            
             <textarea class="form-control custom-css-conditional" id="custom-css-content" rows="10" style="display: none;"></textarea>
           </div>
         </div>

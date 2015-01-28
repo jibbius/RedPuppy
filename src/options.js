@@ -2,11 +2,13 @@
 function save_options() {
   var prismDisabled = document.getElementById('prism-disabled').checked;
   var preferredSort = document.getElementById('preferred-sort').value;
+  var iCP_Theme = document.getElementById('icp-theme').value;
   var customCssEnabled = document.getElementById('custom-css-enabled').checked;
   var customCssContent = document.getElementById('custom-css-content').value;
   chrome.storage.sync.set({
     prismDisabled: prismDisabled,
     preferredSort: preferredSort,
+    iCP_Theme: iCP_Theme,
     customCssEnabled: customCssEnabled,
     customCssContent: customCssContent
   }, function() {
@@ -25,6 +27,7 @@ function restore_options() {
   chrome.storage.sync.get({
     prismDisabled: false,
     preferredSort: false,
+    iCP_Theme: false,
     customCssEnabled: false,
     customCssContent: [
     '/* use smaller employee spotlight image */',
@@ -41,6 +44,7 @@ function restore_options() {
   }, function(items) {
     document.getElementById('prism-disabled').checked = items.prismDisabled;
     document.getElementById('preferred-sort').value = items.preferredSort;
+    document.getElementById('icp-theme').value = items.iCP_Theme;
     document.getElementById('custom-css-enabled').checked = items.customCssEnabled;
     document.getElementById('custom-css-content').value = items.customCssContent;
 

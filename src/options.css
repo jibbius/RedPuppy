@@ -16,3 +16,9 @@ a.navbar-brand img, a.navbar-brand span{
 .navbar-brand img {
     margin: -8px 10px 0 -8px;
 }
+.form-group select {
+    margin-bottom: 4px;
+}
+.form-group label.control-label {
+    margin-top: 10px;
+}
