@@ -1,0 +1,58 @@
+/**
+ * Timber Theme v0.1
+ */
+
+/* Main Background */
+body {
+  background: url('images/retina_wood/retina_wood.png');
+  background-size: 512px 512px;
+  background-repeat: repeat;
+}
+/* Header + Footer styles */
+#logoBar, #foot {
+  background:url('images/wood_pattern/wood_pattern.png');
+  background-size: 203px 317px;
+  background-repeat: repeat;
+}
+/* Retina equivalents */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  body {
+    background: url('images/retina_wood/retina_wood_@2X.png');
+  }
+  /* Header + Footer styles */
+  #logoBar, #foot {
+    background:url('images/wood_pattern/wood_pattern_@2X.png');
+  }
+}
+
+
+
+#nav, #logoBar, #foot {
+  border: 2px solid #D3A988;
+}
+#foot {
+  border-bottom: none;
+}
+#nav, #logoBar {
+  border-top: none;
+}
+
+/* Portlet styles */
+.portlet, .portlet.simple-portlet{
+  border-top: 2px solid #D3A988 !important;
+  border: 2px solid #D3A988;
+}
+
+/* Logo Dropshadow */
+#imgLogo {
+   -webkit-filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+    filter: url(#imgLogo);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
+}
