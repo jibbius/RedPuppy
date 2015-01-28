@@ -4,7 +4,9 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
 
     chrome.storage.sync.get(
         {
-          iCP_Theme: false
+          iCP_Theme: false,
+          customCssEnabled: false,
+          customCssContent: ''
         },
         function(items) {
             if(items.iCP_Theme == 'timberTheme'){
@@ -22,6 +24,21 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
                     head.appendChild(link);
                 }
 
+            }
+
+            if(items.customCssEnabled){
+                var css = items.customCssContent,
+                    head = document.head || document.getElementsByTagName('head')[0],
+                    style = document.createElement('style');
+
+                style.type = 'text/css';
+                if (style.styleSheet){
+                  style.styleSheet.cssText = css;
+                } else {
+                  style.appendChild(document.createTextNode(css));
+                }
+
+                head.appendChild(style);
             }
         }
     );
