@@ -5,6 +5,7 @@
 ## 0.1.6
  - Support for Themes (dropdown list)
  - Initial themes: Default, Timber.
+ - Prioiritise css-injection, within page load
 
 ## 0.1.5
  - Fix for preferredSort (became broken in v0.1.4)
