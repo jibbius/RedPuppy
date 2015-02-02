@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.6.1
+ - Css bugfix (affects Timber only)
+
 ## 0.1.6
  - Support for Themes (dropdown list)
  - Initial themes: Default, Timber.

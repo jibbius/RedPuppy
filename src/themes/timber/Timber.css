@@ -1,5 +1,5 @@
 /**
- * Timber Theme v0.2
+ * Timber Theme v0.1.1
  */
 
 /* Main Background */
@@ -33,13 +33,13 @@ only screen and (                min-resolution: 2dppx) {
 
 #nav, #logoBar, #foot {
   border: 2px solid #D3A988;
-  margin: 0 -2px;
 }
 #foot {
   border-bottom: none;
 }
 #nav, #logoBar {
   border-top: none !important;
+  margin: 0 -2px;
 }
 
 /* Portlet styles */
