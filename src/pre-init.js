@@ -10,17 +10,28 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
           customCssContent: ''
         },
         function(items) {
-            if(items.iCP_Theme == 'timberTheme'){
-              // Timber Theme
-                var cssId = 'timberTheme';  // you could encode the css path itself to generate id..
-                if (!document.getElementById(cssId))
+            if(items.iCP_Theme){
+                var cssId = items.iCP_Theme, cssHref=false;
+                switch(cssId){
+                  case 'timberTheme':
+                    cssHref = 'themes/timber/timber.css';
+                    break;
+                  case 'darkLeatherTheme':
+                    cssHref = 'themes/darkLeather/darkLeather.css';
+                    break;
+                  default:
+                    cssHref=false;
+                }
+
+
+                if (cssHref && !document.getElementById(cssId))
                 {
                     var head  = document.getElementsByTagName('head')[0];
                     var link  = document.createElement('link');
                     link.id   = cssId;
                     link.rel  = 'stylesheet';
                     link.type = 'text/css';
-                    link.href = chrome.extension.getURL('themes/timber/timber.css');
+                    link.href = chrome.extension.getURL(cssHref);
                     link.media = 'all';
                     head.appendChild(link);
                 }
