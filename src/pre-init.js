@@ -5,6 +5,7 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
     chrome.storage.sync.get(
         {
           iCP_Theme: false,
+          htmlEditor: false,
           customCssEnabled: false,
           customCssContent: ''
         },
@@ -24,6 +25,26 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
                     head.appendChild(link);
                 }
 
+            }
+
+            if(items.htmlEditor){
+                var css = [
+                            '/* Always display Source button */',
+                            '.edit-content #cke_48, .content1 #cke_34{',
+                            '  display: inline-block !important;',
+                            '}'
+                           ].join('\n'),
+                    head = document.head || document.getElementsByTagName('head')[0],
+                    style = document.createElement('style');
+
+                style.type = 'text/css';
+                if (style.styleSheet){
+                  style.styleSheet.cssText = css;
+                } else {
+                  style.appendChild(document.createTextNode(css));
+                }
+
+                head.appendChild(style);
             }
 
             if(items.customCssEnabled){

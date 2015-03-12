@@ -1,4 +1,8 @@
 # Changelog
+## 0.1.6.2 (In progress)
+ - Timber updates
+ - HTML editor
+
 ## 0.1.6.1
  - Css bugfix (affects Timber only)
 

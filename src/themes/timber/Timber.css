@@ -2,17 +2,19 @@
  * Timber Theme v0.1.1
  */
 
-/* Main Background */
+/* Main Background(s) */
 body {
   background: url('images/retina_wood/retina_wood.png');
   background-size: 512px 512px;
   background-repeat: repeat;
 }
-/* Header + Footer styles */
 #logoBar, #foot {
   background:url('images/wood_pattern/wood_pattern.png');
   background-size: 203px 317px;
   background-repeat: repeat;
+}
+.head, .foot{
+  background: none;
 }
 /* Retina equivalents */
 @media
@@ -25,12 +27,12 @@ only screen and (                min-resolution: 2dppx) {
   body {
     background: url('images/retina_wood/retina_wood_@2X.png');
   }
-  /* Header + Footer styles */
   #logoBar, #foot {
     background:url('images/wood_pattern/wood_pattern_@2X.png');
   }
 }
 
+/* Header and Footer styles */
 #nav, #logoBar, #foot {
   border: 2px solid #D3A988;
 }
@@ -41,11 +43,22 @@ only screen and (                min-resolution: 2dppx) {
   border-top: none !important;
   margin: 0 -2px;
 }
+#head {
+  padding-bottom: 4px;
+}
+
+/* Page styles */
+.page {
+  border-radius: 4px;
+  padding-top: 10px !important;
+  margin-bottom: 10px;
+}
 
 /* Portlet styles */
 .portlet, .portlet.simple-portlet{
   border-top: 2px solid #D3A988 !important;
   border: 2px solid #D3A988;
+  border-radius: 4px;
 }
 
 /* Logo Dropshadow */

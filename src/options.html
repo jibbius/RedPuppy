@@ -45,9 +45,11 @@
 
       <div class="col-md-8 column">
         <h1 class="page-header">Options</h1>
-        <div class="form-group">
+
+<!-- Pretty Code? -->
+        <div class="form-group clearfix">
           <label class="control-label col-sm-3">Pretty Code</label>
-          <div class="col-sm-7">
+          <div class="col-sm-9">
             <div class="checkbox">
               <label><input type="checkbox" id="prism-disabled">Disable "pretty code snippets"?</label>
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
@@ -55,7 +57,21 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
+
+<!-- Edit posts as HTML? -->
+        <div class="form-group clearfix">
+          <label class="control-label col-sm-3">Edit posts as HTML?</label>
+          <div class="col-sm-9">
+            <div class="checkbox">
+              <label><input type="checkbox" id="html-editor">Enable HTML editing</label>
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
+              data-content="Allows you to edit page/post as HTML"></span>
+            </div>
+          </div>
+        </div>
+
+<!-- Sort Preference -->
+        <div class="form-group clearfix">
           <label for="preferred-sort" class="control-label col-sm-3">Sort Preference</label>
           <div class="col-sm-7">
             <select id="preferred-sort" class="form-control">
@@ -70,7 +86,9 @@
             data-content="The order to sort items (e.g. posts within the forum). If 'No preference', then iConnect usually sorts alphabetically. 'By most recent' is probably a more useful option."></span>
           </div>
         </div>
-        <div class="form-group">
+
+<!-- Theme -->        
+        <div class="form-group clearfix">
           <label for="icp-theme" class="control-label col-sm-3">Theme</label>
           <div class="col-sm-7">
             <select id="icp-theme" class="form-control">
@@ -83,7 +101,9 @@
             data-content="Instant visual love for your iConnect"></span>
           </div>
         </div>
-        <div class="form-group">
+
+<!-- Custom CSS -->        
+        <div class="form-group clearfix">
           <label class="control-label col-sm-3">Custom css</label>
           <div class="col-sm-7">
             <div class="checkbox">
@@ -94,6 +114,7 @@
             <textarea class="form-control custom-css-conditional" id="custom-css-content" rows="10" style="display: none;"></textarea>
           </div>
         </div>
+
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-9">
             <button type="submit" class="btn btn-default" id="save">Save</button>

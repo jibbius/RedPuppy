@@ -1,12 +1,14 @@
 // Saves options to chrome.storage
 function save_options() {
   var prismDisabled = document.getElementById('prism-disabled').checked;
+  var htmlEditor = document.getElementById('html-editor').checked;
   var preferredSort = document.getElementById('preferred-sort').value;
   var iCP_Theme = document.getElementById('icp-theme').value;
   var customCssEnabled = document.getElementById('custom-css-enabled').checked;
   var customCssContent = document.getElementById('custom-css-content').value;
   chrome.storage.sync.set({
     prismDisabled: prismDisabled,
+    htmlEditor: htmlEditor,
     preferredSort: preferredSort,
     iCP_Theme: iCP_Theme,
     customCssEnabled: customCssEnabled,
@@ -29,6 +31,7 @@ function restore_options() {
     preferredSort: false,
     iCP_Theme: false,
     customCssEnabled: false,
+    htmlEditor: false,
     customCssContent: [
     '/* use smaller employee spotlight image */',
     '.spotlight img {',
@@ -43,6 +46,7 @@ function restore_options() {
 
   }, function(items) {
     document.getElementById('prism-disabled').checked = items.prismDisabled;
+    document.getElementById('html-editor').value = items.htmlEditor;
     document.getElementById('preferred-sort').value = items.preferredSort;
     document.getElementById('icp-theme').value = items.iCP_Theme;
     document.getElementById('custom-css-enabled').checked = items.customCssEnabled;
