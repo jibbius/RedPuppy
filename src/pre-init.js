@@ -39,6 +39,7 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
             }
 
             if(items.htmlEditor){
+                /* if this ever stops working, consider: CKEDITOR.tools.callFunction(83) */
                 var css = [
                             '/* Always display Source button */',
                             '.edit-content #cke_48, .content1 #cke_34{',

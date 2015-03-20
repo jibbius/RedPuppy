@@ -46,7 +46,7 @@ function restore_options() {
 
   }, function(items) {
     document.getElementById('prism-disabled').checked = items.prismDisabled;
-    document.getElementById('html-editor').value = items.htmlEditor;
+    document.getElementById('html-editor').checked = items.htmlEditor;
     document.getElementById('preferred-sort').value = items.preferredSort;
     document.getElementById('icp-theme').value = items.iCP_Theme;
     document.getElementById('custom-css-enabled').checked = items.customCssEnabled;
