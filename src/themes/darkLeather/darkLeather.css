@@ -46,6 +46,23 @@ only screen and (                min-resolution: 2dppx) {
 #head {
   padding-bottom: 4px;
 }
+
+/* Footer */
+#foot {
+  background: white;
+}
+body > br {
+  display: none;
+}
+/* App toolbar */
+.app-toolbar .menu-item {
+    min-height: 46px;
+    padding-top: 10px;
+}
+.app-toolbar .menu-item > a {
+    font-size: 16px;
+}
+
 /* Global search box */
 .ui-sitesearch a.search-browse {
   color: #002e77;
@@ -63,6 +80,7 @@ only screen and (                min-resolution: 2dppx) {
   border-top: 2px solid #D3A988 !important;
   border: 2px solid #D3A988;
   border-radius: 4px;
+  margin: 4px;
 }
 
 /* Logo Dropshadow */
@@ -72,3 +90,10 @@ only screen and (                min-resolution: 2dppx) {
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#444')";
 }
+
+/* Homepage: Recent news */
+.recent-news {
+    padding: 4px;
+    border-radius: 4px;
+}
+
