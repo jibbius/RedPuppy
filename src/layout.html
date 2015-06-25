@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="iConnectPlusApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>iConnectPlus | Options</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jack Barker (DST Bluedoor)">
+
+    <!-- styles -->
+    <link href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="options.css" rel="stylesheet" type="text/css">
+    <script src="lib/bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="iCPlus_32.png">
+                        <span>iConnectPlus</span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="PageCtrl">
+                    <ul class="nav navbar-nav">
+                        <li ng-repeat="page in pages" ng-class="{active: page.name == 'Options'}">
+                            <a href="{{page.route}}">{{page.name}}</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="http://iconnect.bluedoor.local/" target="_blank">Go to: iConnect</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
