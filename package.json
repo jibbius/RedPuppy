@@ -1,0 +1,22 @@
+{
+  "name": "redpuppy",
+  "version": "1.0.0",
+  "description": "iConnect Plus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jibbius/RedPuppy.git"
+  },
+  "author": "Jack Barker",
+  "license": "n/a",
+  "bugs": {
+    "url": "https://github.com/jibbius/RedPuppy/issues"
+  },
+  "homepage": "https://github.com/jibbius/RedPuppy#readme",
+  "devDependencies": {
+    "bower": "^1.4.1"
+  }
+}

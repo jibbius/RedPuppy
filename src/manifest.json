@@ -30,16 +30,17 @@
     },
     {
       "matches": ["http://iconnect.bluedoor.local/*"],
-      "js": ["init.js"]
-    },
-    {
-      "matches": ["http://iconnect.bluedoor.local/*"],
-      "js": ["lib/jquery.min.js","lib/prism/prism.min.js"],
+      "js": [
+        "lib/bower_components/jquery/dist/jquery.min.js",
+        "init.js",
+        "lib/prism/prism.min.js"
+      ],
       "css": ["lib/prism/prism.min.css"]
     }
   ],
    "options_page": "options.html",
    "web_accessible_resources": [
-    "themes/*"
+    "themes/*",
+	"lib/*"
   ]
 }

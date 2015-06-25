@@ -5,9 +5,11 @@ if (typeof iCPLoaded === 'undefined') {
     chrome.storage.sync.get(
         {
           preferredSort: false,
-          prismDisabled: false
+          prismDisabled: false,
+          iCP_Theme: false
         },
         function(items) {
+
             if(
                 // Check if a sort preference specified
                 items.preferredSort
@@ -30,6 +32,14 @@ if (typeof iCPLoaded === 'undefined') {
                 }
             }
 
+            if(items.iCP_Theme == 'darkLeatherTheme'){
+                /*
+                  Is this a dark theme?
+                  If so, load the dark toolbar.
+                */
+                jQuery(".app-toolbar > div.light").removeClass("light").addClass("dark");
+            }
+
             if(!items.prismDisabled){
                 /*
                 I tend to use inline styles as a fallback (i.e. for users without the iConnect+ chrome extension)
@@ -47,6 +57,7 @@ if (typeof iCPLoaded === 'undefined') {
                 */
                 Prism.highlightAll();
             }
+            
         }
     );
 
