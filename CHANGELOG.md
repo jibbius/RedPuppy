@@ -1,6 +1,7 @@
 # Changelog
-## 0.1.6.2 (In progress)
- - Timber updates
+## 0.1.6.2
+ - Deprecate PrismJS functionality
+ - Timber theme updates
  - Ability to toggle HTML editor
  - DarkLeather theme (init)
 
