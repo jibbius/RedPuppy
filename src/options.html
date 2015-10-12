@@ -48,12 +48,12 @@
 
 <!-- Pretty Code? -->
         <div class="form-group clearfix">
-          <label class="control-label col-sm-3">Pretty Code</label>
+          <label class="control-label col-sm-3 deprecated">Pretty Code</label>
           <div class="col-sm-9">
             <div class="checkbox">
-              <label><input type="checkbox" id="prism-disabled">Disable "pretty code snippets"?</label>
-              <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
-              data-content="Makes code snippets (posted by users) on iConnect, look much better. Check out prismjs.com for usage examples."></span>
+              <label class="deprecated"><input type="checkbox" id="prism-disabled" disabled checked>Disable "pretty code snippets"?</label>
+              <span class="glyphicon glyphicon-info-sign deprecated" aria-hidden="true" data-toggle="popover"
+              data-content="iConnect now supports this out-of-the-box."></span>
             </div>
           </div>
         </div>
@@ -63,9 +63,9 @@
           <label class="control-label col-sm-3">Edit posts as HTML?</label>
           <div class="col-sm-9">
             <div class="checkbox">
-              <label><input type="checkbox" id="html-editor">Enable HTML editing</label>
+              <label><input type="checkbox" id="html-editor">Enable HTML editing.</label>
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
-              data-content="Allows you to edit page/post as HTML"></span>
+              data-content="Allows you to edit page/post as HTML. This feature is experimental (and will not affect server-side code). At some point in time the iConnect team chose to disable this feature (without explanation). I can't think why they would do this (the server already validates that the user is not submitting harmful code). That said - use at own risk."></span>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
           </div>
           <div class="col-sm-2">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover"
-            data-content="Instant visual love for your iConnect"></span>
+            data-content="Instant visual love for your iConnect. If you have your own themes your experimenting with (and would like to include it in iConnectPlus), please contact."></span>
           </div>
         </div>
 

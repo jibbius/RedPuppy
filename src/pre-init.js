@@ -42,7 +42,10 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
                 /* if this ever stops working, consider: CKEDITOR.tools.callFunction(83) */
                 var css = [
                             '/* Always display Source button */',
-                            '.edit-content #cke_48, .content1 #cke_34{',
+                            '.edit-content #cke_48,',
+                            '.content1 #cke_34,',
+                            '.source-button-cke,',
+                            'a#cke_112{',
                             '  display: inline-block !important;',
                             '}'
                            ].join('\n'),

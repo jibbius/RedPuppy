@@ -22,3 +22,7 @@ a.navbar-brand img, a.navbar-brand span{
 .form-group label.control-label {
     margin-top: 10px;
 }
+.deprecated {
+    text-decoration: line-through;
+    color: #E2CECE;
+}

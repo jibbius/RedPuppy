@@ -1,6 +1,4 @@
 TODO: Add [Help] page
-TODO: Help page content: PrismJS
-TODO: Help page content: Edit as HTML (describe why this is not a security risk)
 TODO: Improve themes
 TODO: Speed in toggling to "dark" theme
 TODO: Add "iConnect Plus" button, directly onto iConnect

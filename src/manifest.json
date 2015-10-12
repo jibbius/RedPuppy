@@ -32,10 +32,8 @@
       "matches": ["http://iconnect.bluedoor.local/*"],
       "js": [
         "lib/bower_components/jquery/dist/jquery.min.js",
-        "init.js",
-        "lib/prism/prism.min.js"
-      ],
-      "css": ["lib/prism/prism.min.css"]
+        "init.js"
+      ]
     }
   ],
    "options_page": "options.html",
