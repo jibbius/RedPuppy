@@ -3,7 +3,7 @@
   "name": "iConnectPlus (Bluedoor)",
   "short_name": "iCPlus",
   "author": "Jack Barker",
-  "version": "0.1.6.2",
+  "version": "0.1.6.3",
   
   "description": "Extension for Bluedoor's iConnect intranet",
   "icons":
@@ -39,6 +39,6 @@
    "options_page": "options.html",
    "web_accessible_resources": [
     "themes/*",
-	"lib/*"
+	  "lib/*"
   ]
 }
