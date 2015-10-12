@@ -1,13 +1,11 @@
 // Saves options to chrome.storage
 function save_options() {
-  var prismDisabled = document.getElementById('prism-disabled').checked;
   var htmlEditor = document.getElementById('html-editor').checked;
   var preferredSort = document.getElementById('preferred-sort').value;
   var iCP_Theme = document.getElementById('icp-theme').value;
   var customCssEnabled = document.getElementById('custom-css-enabled').checked;
   var customCssContent = document.getElementById('custom-css-content').value;
   chrome.storage.sync.set({
-    prismDisabled: prismDisabled,
     htmlEditor: htmlEditor,
     preferredSort: preferredSort,
     iCP_Theme: iCP_Theme,
@@ -25,9 +23,7 @@ function save_options() {
 
 // Restores select box and checkbox state using the preferences stored in chrome.storage.
 function restore_options() {
-  // Use default value prismDisabled = false.
   chrome.storage.sync.get({
-    prismDisabled: false,
     preferredSort: false,
     iCP_Theme: false,
     customCssEnabled: false,
@@ -45,7 +41,6 @@ function restore_options() {
    ].join('\n')
 
   }, function(items) {
-    document.getElementById('prism-disabled').checked = items.prismDisabled;
     document.getElementById('html-editor').checked = items.htmlEditor;
     document.getElementById('preferred-sort').value = items.preferredSort;
     document.getElementById('icp-theme').value = items.iCP_Theme;

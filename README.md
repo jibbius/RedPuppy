@@ -12,3 +12,9 @@ The build process requires;
 ##Troubleshooting
 - If behind a corporate firewall you may need to configure git to use https (instead of git://)
 git config --global url.https://.insteadOf git://
+
+
+##Build steps:
+- npm install
+- bower install
+- TODO: Anything else?
