@@ -44,8 +44,9 @@ if (typeof iCP_Theme_Loaded === 'undefined') {
                             '/* Always display Source button */',
                             '.edit-content #cke_48,',
                             '.content1 #cke_34,',
+                            'a#cke_112,',
                             '.source-button-cke,',
-                            'a#cke_112{',
+                            '.cke_toolbar[role=toolbar] a.cke_button.cke_button__source{',
                             '  display: inline-block !important;',
                             '}'
                            ].join('\n'),

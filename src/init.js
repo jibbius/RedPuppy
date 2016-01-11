@@ -5,6 +5,7 @@ if (typeof iCPLoaded === 'undefined') {
     chrome.storage.sync.get(
         {
           preferredSort: false,
+          prismDisabled: false,
           iCP_Theme: false
         },
         function(items) {
@@ -38,7 +39,25 @@ if (typeof iCPLoaded === 'undefined') {
                 */
                 jQuery(".app-toolbar > div.light").removeClass("light").addClass("dark");
             }
-           
+
+            if(!items.prismDisabled){
+                /*
+                I tend to use inline styles as a fallback (i.e. for users without the iConnect+ chrome extension)
+                e.g. <pre class="code" style="[hack]">
+                    
+                Given the user has the iConnect+ plugin installed, we can strip out any inline styles:
+                */
+                jQuery("pre.code").removeAttr('style');
+
+                /*
+                Because of the way we are loading Prism, the default event listener will not be triggered (i.e.
+                we've missed DOMContentLoaded).
+                
+                For this reason, we need to call the function explicity:
+                */
+                Prism.highlightAll();
+            }
+            
         }
     );
 
