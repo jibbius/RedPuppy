@@ -47,7 +47,8 @@ If attempting to build from source, you will require:
 
 These steps assume you have been added as an Admin to the Chrome Webstore project.
 
-- Ensure `CHANGELOG.MD` is updated to reflect changes
+- Ensure that the version number in `src/manifest.json` has been incremented
+- Ensure `CHANGELOG.MD` is updated to itemise the updates/changes
 - Run `PrepForWebstore.bat`, or if Powershell is unavailable (required for zip command) then zip the `src` folder to be uploaded to the Chrome Webstore.
 - Login to the Chrome Webstore
 - Follow the prompts to upload the new `dist.zip` and copy the content from `CHANGELOG.MD` when publishing
