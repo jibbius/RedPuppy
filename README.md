@@ -61,4 +61,4 @@ Contributions are most welcome.
 Either submit an issue or pull request, or reach out and chat to me.
 
 
-[screenshot]: webstore-assets/screenshot.png  "Options page"
+[screenshot]: webstore-assets/screenshot_800x610_border.png  "Options page"
