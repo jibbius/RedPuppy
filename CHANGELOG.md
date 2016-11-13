@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.7.1
+ - Fix mailto link
+
 ## 0.1.7.0
  - Reintroduce PrismJS functionality
 
