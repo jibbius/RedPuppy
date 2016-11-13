@@ -20,7 +20,7 @@ The plugin enhances the base offering of the portal, with the following addition
 
 ## Webstore Link
 
-The plugin is available from the Chrome Webstore, [here]([https://chrome.google.com/webstore/detail/iconnectplus-bluedoor/gaipmclnjcnaepijeohadnbpmejeiiii]){:target="_blank"}.
+The plugin is available from the Chrome Webstore, [here](https://chrome.google.com/webstore/detail/iconnectplus-bluedoor/gaipmclnjcnaepijeohadnbpmejeiiii){:target="_blank"}.
 
 
 ## Building from source - Prerequisites
